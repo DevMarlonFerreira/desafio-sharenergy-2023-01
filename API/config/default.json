@@ -1,0 +1,8 @@
+{
+    "App": {
+      "auth": {
+        "key": "sharenergy",
+        "tokenExpiresIn": "20000000"
+      }
+    }
+  }
