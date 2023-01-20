@@ -6,7 +6,6 @@ const Field = styled.div`
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
-    border: 1px solid #000000;
 }
 `;
 

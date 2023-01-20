@@ -45,5 +45,3 @@ export class RandomUserController {
         }
     }
 }
-
-// foto do usuário, nome completo, email, username e idade

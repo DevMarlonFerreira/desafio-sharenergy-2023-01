@@ -31,38 +31,40 @@ const RandomUser = (data: RandomUserData[]) => {
     }
 
     return <>
-        <Grid>
-            <ContainerInput>
-                <label htmlFor="name">Nome:</label>
-                <input
-                    type="text"
-                    id="name"
-                    onChange={(e) => setName(e.target.value)}
-                    value={name}
-                />
-            </ContainerInput>
-            <ContainerInput>
-                <label htmlFor="email">Email:</label>
-                <input
-                    type="text"
-                    id="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                />
-            </ContainerInput>
-            <ContainerInput>
-                <label htmlFor="username">Username:</label>
-                <input
-                    type="text"
-                    id="username"
-                    onChange={(e) => setUsername(e.target.value)}
-                    value={username}
-                />
-            </ContainerInput>
-        </Grid>
-        <Button onClick={e => getRandomUser(1)}>
-            Buscar
-        </Button>
+        <Root>
+            <Grid>
+                <ContainerInput>
+                    <label htmlFor="name">Nome:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        onChange={(e) => setName(e.target.value)}
+                        value={name}
+                    />
+                </ContainerInput>
+                <ContainerInput>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        type="text"
+                        id="email"
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                    />
+                </ContainerInput>
+                <ContainerInput>
+                    <label htmlFor="username">Username:</label>
+                    <input
+                        type="text"
+                        id="username"
+                        onChange={(e) => setUsername(e.target.value)}
+                        value={username}
+                    />
+                </ContainerInput>
+            </Grid>
+            <Button onClick={e => getRandomUser(1)}>
+                Buscar
+            </Button>
+        </Root>
         <Grid>
             {
                 Object.values(randomUser).map((user: RandomUserData, key) => (

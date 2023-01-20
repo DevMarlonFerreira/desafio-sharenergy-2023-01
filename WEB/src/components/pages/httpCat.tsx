@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 import { HttpCatService } from "../../service/httpCat";
 import Button from "../atoms/Button";
 import ContainerInput from "../atoms/ContainerInput";
-import Img from "../atoms/Img";
 import Root from "../atoms/Root";
-
-// import { HttpCat } from "../../typings/httpCat.d";
 
 const HttpCat = (url: any) => {
     const [cat, setCat] = useState<any>();
@@ -22,7 +19,7 @@ const HttpCat = (url: any) => {
             setCat(result)
     }
 
-    return <>
+    return <Root>
         <ContainerInput>
             <label htmlFor="code">Code:</label>
             <input
@@ -35,8 +32,10 @@ const HttpCat = (url: any) => {
         <Button onClick={e => getHttpCat()}>
             Buscar
         </Button>
-        <img src={cat} alt={cat} />
-    </>
+        <div>
+            <img src={cat} alt={cat} />
+        </div>
+    </Root>
 };
 
 export default HttpCat;

@@ -1,6 +1,8 @@
 const isConnected = () => {
-    const isConnected = localStorage.getItem('@token');
-    if(isConnected)
+    const isConnectedLocal = localStorage.getItem('@token');
+    const isConnectedSession = sessionStorage.getItem('@token');
+
+    if (isConnectedLocal || isConnectedSession)
         return true;
     else
         return false;

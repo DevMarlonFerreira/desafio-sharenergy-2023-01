@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { RandomDogService } from "../../service/randomDog";
 
+import Root from "../atoms/Root";
 import Button from "../atoms/Button";
 import Img from "../atoms/Img";
 
@@ -8,18 +9,23 @@ const RandomDog = () => {
     const [randomDog, setRandomDog] = useState();
 
     useEffect(() => {
-        getRandomDog()
+        getRandomDog();
     }, []);
 
     async function getRandomDog() {
         const randomDogService = new RandomDogService();
 
-        const result = await randomDogService.getRandomDog();
-        if (result)
-            setRandomDog(result)
+        let repeat = true;
+        while (repeat) {
+            const result = await randomDogService.getRandomDog();
+            if (!result?.includes(".mp4")) {
+                setRandomDog(result)
+                repeat = false;
+            }
+        }
     }
 
-    return <>
+    return <Root>
         <div>
             <Img src={randomDog} alt={randomDog} />
         </div>
@@ -28,7 +34,7 @@ const RandomDog = () => {
                 REFRESH
             </Button>
         </div>
-    </>
+    </Root>
 };
 
 export default RandomDog;
