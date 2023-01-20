@@ -55,6 +55,11 @@ const Modal = ({ data, callback }: IModal) => {
                     <>
                         <Close onClick={fechar}>&times;</Close>
                     </>
+                    {data ?
+                        <h3>Editar</h3>
+                        :
+                        <h3>Novo cliente</h3>
+                    }
                     <ContainerInput>
                         <label htmlFor="nome">Nome:</label>
                         <input

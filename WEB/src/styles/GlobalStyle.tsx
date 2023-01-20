@@ -15,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 14px;
     color: ${(props) => props.theme.colors.text};
   }
+  input {
+    border: 0;
+  }
 `;
 
 const GlobalStyledComposed = () => (
