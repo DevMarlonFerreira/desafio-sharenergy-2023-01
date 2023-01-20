@@ -6,6 +6,7 @@ const Button = styled.button`
   text-transform: uppercase;
   padding: 12px 36px;
   cursor: pointer;
+  margin: 25px 0 20px 0;
 
   display: inline-block;
   text-decoration: none;

@@ -26,6 +26,7 @@ const RandomDog = () => {
     }
 
     return <Root>
+        <h1>Random Dog</h1>
         <div>
             <Img src={randomDog} alt={randomDog} />
         </div>

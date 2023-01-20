@@ -20,6 +20,7 @@ const HttpCat = (url: any) => {
     }
 
     return <Root>
+        <h1>Http Cat</h1>
         <ContainerInput>
             <label htmlFor="code">Code:</label>
             <input

@@ -40,29 +40,10 @@ const Client = (data: any) => {
     }
 
     return <Root>
+        <h1>Clientes</h1>
         {
             clients?.length > 0 ?
                 <Table>
-                    <Row>
-                        <Field>
-                            NOME
-                        </Field>
-                        <Field>
-                            CPF
-                        </Field>
-                        <Field>
-                            TELEFONE
-                        </Field>
-                        <Field>
-                            DADOS
-                        </Field>
-                        <Field>
-                            EDITAR
-                        </Field>
-                        <Field>
-                            DELETAR
-                        </Field>
-                    </Row>
                     {clients.map((client: any, key: number) => (
                         <Row key={key}>
                             <Field>

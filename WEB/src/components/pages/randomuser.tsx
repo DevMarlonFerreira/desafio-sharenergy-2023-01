@@ -32,6 +32,7 @@ const RandomUser = (data: RandomUserData[]) => {
 
     return <>
         <Root>
+            <h1>Random User</h1>
             <Grid>
                 <ContainerInput>
                     <label htmlFor="name">Nome:</label>
