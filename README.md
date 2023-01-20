@@ -2,16 +2,21 @@
 
 ## MONGODB
 Acessar a raiz da pasta "docker_compose"
+
 Executar o comando "docker compose up" no terminal
 
 ## API
 Acessar a raiz da pasta "API"
+
 Executar o comando "npm install" no terminal
+
 Executar o comando "npm run start:dev" no terminal
 
 ## WEB
 Acessar a raiz da pasta "WEB"
+
 Executar o comando "yarn install" no terminal
+
 Executar o comando "yarn start" no terminal
 
 
