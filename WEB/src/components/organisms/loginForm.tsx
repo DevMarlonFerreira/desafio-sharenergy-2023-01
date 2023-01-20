@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import Button from "../atoms/Button";
 import Root from "../atoms/Root";
+import ContainerInput from "../atoms/ContainerInput";
+
 
 const URL = "http://localhost:3000/user/auth"
 
@@ -11,7 +13,7 @@ const Input = styled.input`
     font-size: 14px;
     padding: 10px;
     border-radius: 20px;
-    margin: 15px 10px;
+    border-bottom: 1px;
 `;
 
 export function LoginForm() {
@@ -65,12 +67,12 @@ export function LoginForm() {
             <h1>
                 LOGIN TESTE SHARENERGY 2023/01
             </h1>
-            <div>
+            <ContainerInput>
                 <Input type="text" onChange={(e: React.FormEvent<HTMLInputElement>) => setUsername((e.target as HTMLInputElement).value)} placeholder="Usuário" required />
-            </div>
-            <div>
+            </ContainerInput>
+            <ContainerInput>
                 <Input type="password" onChange={(e: React.FormEvent<HTMLInputElement>) => setPassword((e.target as HTMLInputElement).value)} placeholder="Senha" required />
-            </div>
+            </ContainerInput>
             <div>
                 <Button onClick={e => login()}>ENTRAR</Button>
             </div>
