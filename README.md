@@ -1,5 +1,8 @@
 # INSTALAÇÃO
 
+## VÍDEO
+https://www.youtube.com/watch?v=vuSQw6bHa3g
+
 ## MONGODB
 Acessar a raiz da pasta "docker_compose".
 
